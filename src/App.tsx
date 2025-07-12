@@ -4,7 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ProductProvider } from "./context/ProductContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Cart from "./components/Cart";
-import NavBar from "./components/NavBar";
+import Navbar from "./components/Navbar";
+import Profile from "./components/Profile";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
+import { AuthProvider } from "./context/AuthContext";
 
 
 
@@ -15,13 +20,19 @@ function App() {
   return (
     <QueryClientProvider client={client}>
       <ProductProvider>
-        <BrowserRouter>
-        <NavBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<Cart />} />
-          </Routes>
-        </BrowserRouter>
+        <AuthProvider>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/logout" element={<Logout />} />
+            </Routes>
+          </BrowserRouter>
+        </AuthProvider>
       </ProductProvider>
     </QueryClientProvider>
   );
