@@ -65,7 +65,7 @@ const Home: React.FC = () => {
                     Clear Filter
                 </button>
             </div>
-            {isLoading && <h1>Loading...</h1>}
+            {isLoading && <h1 className="text-light">Loading...</h1>}
             <Container className="my-4 p-4 rounded">
                 <Row className="g-4 justify-content-center">
                     {filteredProducts.map((product) => (
