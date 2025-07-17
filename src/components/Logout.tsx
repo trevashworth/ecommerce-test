@@ -1,7 +1,7 @@
 import { useEffect} from 'react'
 import { signOut } from 'firebase/auth';
 import { auth } from '../lib/firebase/firebase';
-import styles from '../styles/auth-styles';
+
 
 const Logout = () => {
   useEffect(() => {
@@ -9,8 +9,8 @@ const Logout = () => {
   }, []);
 
   return (
-    <div styles={styles.form}>Logout</div>
+    <div className='logout'>Logout</div>
   )
 }
 
-export default Logout
+export default Logout;
