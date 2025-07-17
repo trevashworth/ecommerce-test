@@ -1,15 +1,15 @@
 import { useEffect} from 'react'
 import { signOut } from 'firebase/auth';
-import { userAuth } from '../lib/firebase/firebase';
+import { auth } from '../lib/firebase/firebase';
 import styles from '../styles/auth-styles';
 
 const Logout = () => {
   useEffect(() => {
-    signOut(userAuth);
+    signOut(auth);
   }, []);
 
   return (
-    <div className={styles.form}>Logout</div>
+    <div styles={styles.form}>Logout</div>
   )
 }
 

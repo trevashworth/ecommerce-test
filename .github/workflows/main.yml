@@ -1,0 +1,43 @@
+name: Ecommerce App CI/CD
+
+on:
+    push: 
+        branches:
+            - main # Triggers workflow on push to main branch
+    pull_request:
+        branches:
+            - main # Triggers workflow on pull request to main branch
+
+jobs:
+    build: #Continuous Intergation
+        runs-on: ubuntu-latest
+
+        steps:
+            # Step 1: Checkout the code
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            # Step 2: Set up Node.js
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                node-version: '20'
+
+            # Step 3: Install dependencies
+            - name: Install dependemcies
+              run: npm install
+
+            # Step 4: Run tests
+            - name: Run tests
+              run: npm test
+
+            # Step 5: Build the application
+            - name: Build application
+              run: npm run build
+
+
+            
+
+ 
+
+
