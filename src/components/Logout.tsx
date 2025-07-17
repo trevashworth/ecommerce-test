@@ -9,7 +9,7 @@ const Logout = () => {
   }, []);
 
   return (
-    <div className='logout'>Logout</div>
+    <div className='logout'>User Logged Out</div>
   )
 }
 
