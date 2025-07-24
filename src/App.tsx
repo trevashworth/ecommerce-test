@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { ProductProvider } from "./context/ProductContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Cart from "./components/Cart";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/NavBar";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
 import Login from "./components/Login";
