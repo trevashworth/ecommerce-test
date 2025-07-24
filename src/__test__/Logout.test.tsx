@@ -6,13 +6,18 @@ import '@testing-library/jest-dom';// Mock the signOut function from firebase/au
 jest.mock('firebase/auth', () => ({
   signOut: jest.fn(),
   // If auth is a default export or named, mock it as well
-  userAuth: {},
+  getAuth: jest.fn(() => ({})),
 }));
+jest.mock('firebase/app', () => ({
+  initializeApp: jest.fn(() => ({})),
+})
+)
+
 
 describe('Logout component', () => {
   it('renders "Logout" text', () => {
     render(<Logout />);
-    expect(screen.getByText(/logout/i)).toBeInTheDocument();
+    expect(screen.getByText(/User Logged Out/i)).toBeInTheDocument();
   });
 
   it('calls signOut on mount', () => {
