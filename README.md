@@ -38,6 +38,10 @@ Users can browse, filter by category, add items to their shopping cart, and simu
   - "Checkout" button clears the cart in Redux and sessionStorage.
   - Users receive a visual confirmation that their cart has been cleared.
 
+- **CI/CD Implementation**
+  - Continuous Integration:  Every push and pull request triggers automated tests and linting to ensure code quality and reliability.
+  - Continuous Deployment: Successful builds are automatically deployed to Vercel - 
+
 ---
 
 ---
