@@ -40,7 +40,8 @@ Users can browse, filter by category, add items to their shopping cart, and simu
 
 - **CI/CD Implementation**
   - Continuous Integration:  Every push and pull request triggers automated tests and linting to ensure code quality and reliability.
-  - Continuous Deployment: Successful builds are automatically deployed to Vercel - 
+  - Continuous Deployment: Successful builds are automatically deployed to Vercel - ecommerce-test-olive-theta.vercel.app
+
 
 ---
 
